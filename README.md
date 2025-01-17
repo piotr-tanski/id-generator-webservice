@@ -4,7 +4,7 @@ A Unique ID Generator exposing a REST API.
 
 ## API
 
-GET `/ids` - returns a new unique ID.
+GET `/v1/ids` - returns a new unique ID.
 
 ## Build and run the project
 

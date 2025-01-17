@@ -20,6 +20,6 @@ func main() {
 	generator := generator.NewGenerator(machine_id)
 
 	router := gin.Default()
-	router.GET("/ids", getNextUniqueIdHandler(&generator))
+	router.GET("/v1/ids", getNextUniqueIdHandler(&generator))
 	router.Run("localhost:8080")
 }
