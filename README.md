@@ -10,5 +10,5 @@ GET `/v1/ids` - returns a new unique ID.
 
 ```
 $ go mod tidy
-$ go run .
+$ PORT=8080 go run ./cmd/webservice/id_generator_webservice.go
 ```

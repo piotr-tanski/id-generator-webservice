@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func getNextUniqueIdHandler(handler *handlers.GenerateUniqueIdHandler) gin.HandlerFunc {
+func getUniqueId(handler *handlers.GenerateUniqueIdHandler) gin.HandlerFunc {
 	fn := func(c *gin.Context) {
 		status, response := handler.GenerateId()
 		c.IndentedJSON(status, response)
@@ -21,6 +21,6 @@ func main() {
 	uniqueIdHandler := handlers.GenerateUniqueIdHandler{Generator: &generator}
 
 	router := gin.Default()
-	router.GET("/v1/ids", getNextUniqueIdHandler(&uniqueIdHandler))
-	router.Run("localhost:8081")
+	router.GET("/v1/ids", getUniqueId(&uniqueIdHandler))
+	router.Run()
 }
