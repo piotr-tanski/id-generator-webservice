@@ -5,6 +5,7 @@ go 1.23.5
 require (
 	github.com/gin-gonic/gin v1.10.0
 	id_generator/generator v0.0.0-00010101000000-000000000000
+	id_generator/handlers v0.0.0-00010101000000-000000000000
 )
 
 require (
@@ -37,3 +38,5 @@ require (
 )
 
 replace id_generator/generator => ./id_generator
+
+replace id_generator/handlers => ./handlers
